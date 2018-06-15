@@ -4,7 +4,9 @@ Created on Thu Jun  9 13:36:46 2016
 
 @author: WELG
 """
-
+import os
+curr_dir = os.path.dirname(os.path.realpath(__file__))  # gets the path of the script
+os.chdir(curr_dir)  # changes the current path to the path of the script
 data44 = []
 
 file_name = input("Provide the name of a file of data ")
