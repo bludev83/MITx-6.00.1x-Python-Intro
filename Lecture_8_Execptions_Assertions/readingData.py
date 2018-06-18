@@ -7,18 +7,18 @@ Created on Thu Jun  9 13:36:46 2016
 import os
 curr_dir = os.path.dirname(os.path.realpath(__file__))  # gets the path of the script
 os.chdir(curr_dir)  # changes the current path to the path of the script
-data445 = []
+data449 = []
 
 file_name = input("Provide the name of a file of data ")
 
 try:
-    fh = open(file_name, 'r')
+    fh1 = open(file_name, 'r')
 except IOError:
-    print('cannotTT open', file_name)
+    print('CAN-NOT open', file_name)
 else:
-    for new in fh:
+    for new in fh1:
         if new != '\n':
             addIt = new[:-1].split(',')  # remove trailing \n
-            data445.append(addIt)
+            data449.append(addIt)
 finally:
-    fh.close()  # close file even if fail
+    fh1.close()  # close file even if fail
